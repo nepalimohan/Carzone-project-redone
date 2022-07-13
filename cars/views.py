@@ -21,4 +21,12 @@ def car_details(request, id):
     return render(request, 'cars/car_details.html', data)
 
 def search(request):
-    pass
+    searched_cars = Car.objects.order_by('-created_date')
+    if 'keyword' in request.GET:
+        keyword = request.GET['keyword']
+        if keyword:
+            searched_cars = searched_cars.filter(description__icontains=keyword)
+    data = {
+        'searched_cars':searched_cars,
+    }
+    return render(request, 'cars/search.html', data)

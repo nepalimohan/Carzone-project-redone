@@ -44,15 +44,6 @@
                     <input type="text" name="keyword" placeholder="Search by name" class="form-control">
                 </div>
                 <div class="form-group">
-                    <select class="form-control search-fields" name="select-brand">
-                        <option selected="true" disabled="disabled">Brand</option>
-                        <option>Audi</option>
-                        <option>BMW</option>
-                        <option>Honda</option>
-                        <option>Nissan</option>
-                    </select>
-                </div>
-                <div class="form-group">
                     <select class="form-control search-fields" name="select-make">
                         <option selected="true" disabled="disabled">Model</option>
                         <option>BMW</option>
@@ -242,7 +233,7 @@
                                     <div class="car-magnify-gallery">
                                         <a href="{{cars.car_photo.url}}" class="overlap-btn">
                                             <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="{{cars.car_photo}}">
+                                            <img class="hidden" src="{{cars.car_photo.url}}">
                                         </a>
                                         {% if cars.car_photo1 %}
                                         <a href="{{cars.car_photo1.url}}" class="hidden">
