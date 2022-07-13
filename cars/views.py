@@ -19,3 +19,6 @@ def car_details(request, id):
         'single_car':single_car,
     }
     return render(request, 'cars/car_details.html', data)
+
+def search(request):
+    pass
