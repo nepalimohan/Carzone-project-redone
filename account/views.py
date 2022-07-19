@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 # Create your views here.
 def login(request):
@@ -9,7 +10,8 @@ def logout(request):
 
 def register(request):
     if request.method == 'POST':
-        print("demo")
+        messages.error(request, 'Error Message')
+        return redirect('register')
     return render(request, 'account/register.html')
 
 def dashboard(request):

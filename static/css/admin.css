@@ -1,0 +1,19 @@
+#header{
+    background-color: #1111 !important;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button{
+    background: #111;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default{
+    background: #111;
+}
+
+div.breadcrumbs{
+    background: #111;
+}
+
+a:link, a:visited{
+    color: rgb(155, 155, 155);
+}
