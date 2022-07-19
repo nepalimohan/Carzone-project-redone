@@ -30,11 +30,11 @@ def register(request):
 
                 else:
                     user = User.objects.create_user(first_name=firstname, last_name=lastname, username=username, email=email, password=password)
-                    auth.login(request, user)
+                    auth.login(request, user) #this block of code makes user login automatically
                     messages.success(request, "You are now logged in!")
                     return redirect('dashboard')
                  
-                    user.save()
+                    user.save() #this block of code save user data
                     messages.success(request, "User registered successfully")
                     return redirect('login')
         else:
